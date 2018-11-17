@@ -18,7 +18,7 @@ class Location(models.Model):
 class Camera(models.Model):
 	ip = models.CharField(max_length=500)
 	name = models.CharField(max_length=500)
-	location = models.ForeignKey(Location,null=True)
+	location = models.ForeignKey(Location,null=True, on_delete= models.CASCADE)
 	option = models.CharField(max_length=20)
 	auth_uname = models.CharField(max_length=200)
 	auth_pwd = models.CharField(max_length=500)

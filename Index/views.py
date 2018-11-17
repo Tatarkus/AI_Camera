@@ -1,7 +1,7 @@
 from django.shortcuts import render ,HttpResponse,redirect
 from django.http import StreamingHttpResponse
 
-from camera import VideoCamera
+from .camera import VideoCamera
 from .models  import Location, Camera
 from .form   import LocationForm, CameraForm
 def basic(request):
@@ -39,8 +39,7 @@ def addlocation(request):
 			return redirect('/addcamera')
 	else:
 		form = LocationForm()
- 	
- 	return render(request,'Index/Addlocation.html', {'form':form,'locations':locations})
+	return render(request,'Index/Addlocation.html', {'form':form,'locations':locations})
 
 
 def addcamera(request):
@@ -93,18 +92,6 @@ def video_streamer(request, camID ):
 	
 	camIP = "rtsp://%s:%s@%s/" %(camObj.auth_uname, camObj.auth_pwd, camObj.ip)
 
-
-
-	
-
-	
-		
-	
-	
-
-	
-
-	
 	
 	repsone = gen(VideoCamera(camIP))
 	
@@ -131,5 +118,3 @@ def cameras_list(request):
 	context.update({'CameraLists' : CameraLists,'locations' : locations})
 
 	return render (request,"Index/cameras.html",context)
-
- 
