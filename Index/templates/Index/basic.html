@@ -77,21 +77,9 @@ and open the template in the editor.
     </head>
     <body>
         <div class="first">
+            <h1>HOLA MUNDO</h1>>
         </div> 
-        
-        <div>
-            <ul class="menu">
-                <li><a href="{% url 'home' %}" >Home</a> </li>
-                <li><a href="{% url 'addlocation' %}">AddLocation</a></li>
-                <li><a href="{% url 'addcamera' %}">AddCamera</a></li>
-                <li><a href="#">Notification</a></li>
-                <li class="fix">Location</li>
-                {% block location %}
 
-                {% endblock %}
-            </ul>
-        </div> 
-        
         <div class="second" > 
        
          {%  block content %}

@@ -8,5 +8,7 @@ urlpatterns = [
 	url(r'^addcamera/',views.addcamera, name='addcamera'),
 	url(r'^video_streamer/(?P<camID>\d+)',views.video_streamer, name='video_streamer'),
 	url(r'^camera_by_location/(?P<locationid>\d+)', views.camera_by_location, name='camera_by_location'),
-	url(r'^cameras/',views.cameras_list, name='cameras_list')
+	url(r'^cameras/',views.cameras_list, name='cameras_list'),
+	url(r'^entrenar/',views.entrenar, name='entrenar'),
+
 ]

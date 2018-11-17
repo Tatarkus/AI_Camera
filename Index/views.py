@@ -87,15 +87,27 @@ def gen(camera):
 					b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 def video_streamer(request, camID ):
-	camObj = Camera.objects.get(pk=camID)
+	#camObj = Camera.objects.get(pk=camID)
 
 	
-	camIP = "rtsp://%s:%s@%s/" %(camObj.auth_uname, camObj.auth_pwd, camObj.ip)
+	#camIP = "rtsp://%s:%s@%s/" %(camObj.auth_uname, camObj.auth_pwd, camObj.ip)
 
 	
-	repsone = gen(VideoCamera(camIP))
+	repsone = gen(VideoCamera())
 	
 	return  StreamingHttpResponse(repsone,content_type='multipart/x-mixed-replace; boundary=frame')
+
+def entrenar(request):
+	#camObj = Camera.objects.get(pk=camID)
+
+	
+	#camIP = "rtsp://%s:%s@%s/" %(camObj.auth_uname, camObj.auth_pwd, camObj.ip)
+
+	
+	repsone = gen(VideoCamera())
+	
+	return  StreamingHttpResponse(repsone,content_type='multipart/x-mixed-replace; boundary=frame')
+
 
 def camera_by_location(request ,locationid):
 	

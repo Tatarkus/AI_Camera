@@ -10,14 +10,17 @@
 {% block content %}
 
 
-<h1>  Introductions </h1>
+<h1>  Entrenamiento </h1>
 
  <p>
-            
-               1.  First you need to create the Location by click on <a href="{% url 'addlocation' %}">Location</a>, click on Add
-                 then input name of the Location click OK button . <br><br>
-               2.  Second go to <a href="{% url  'addcamera' %}">Camera</a> to input IP of the camera you use and specify the name of it,
-                 select the Location you want to put and Choose the Function of the camera you want (or both)
+            1. <input type="text">	
+            2.  <button type="button">Entrenar</button>
+               
                
             </p>
+
+            
+    <img src="{% url 'entrenar' %}" width="600px" height="420px">
+   
+
 {% endblock %}
