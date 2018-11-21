@@ -5,7 +5,7 @@ from .camera import VideoCamera
 
 
 def index(request):
-	return render(request, "Index/home.html")
+	return render(request, "Camara/home.html")
 	#return HttpResponse ("hello")	
 
 def gen(camera):

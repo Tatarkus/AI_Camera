@@ -7,7 +7,7 @@ import numpy
 import sys
 nombre = "prueba"
 
-face_cascade = cv2.CascadeClassifier('Index/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('Camara/haarcascade_frontalface_default.xml')
 
 class VideoCamera(object):
 

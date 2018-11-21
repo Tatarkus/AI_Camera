@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Index',
+    'crispy_forms',
+    'Camara',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'ai_cam.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'Index/')],
+        'DIRS': [os.path.join(BASE_DIR,'Camara/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
